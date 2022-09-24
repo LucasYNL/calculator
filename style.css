@@ -4,12 +4,11 @@
     justify-content: center;
     align-items: center;
     height: 500px;
-    width: 450px;
+    width: 410px;
     border: 2px solid black;
     border-radius: 10px;
-    gap: 30px;
+    gap: 25px;
     margin: auto;
-    width: 50%;
     margin-top: 50px;
 }
 
@@ -18,6 +17,18 @@
     width: 350px;
     border-radius: 10px;
     border: 1px solid black;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+.display{
+    height: 80px;
+    width: 300px;
+    border-style: none;
+    font-size: 50px;
+    text-align: right;
 }
 
 .cal_body{
@@ -31,7 +42,7 @@
     gap: 10px;
 }
 
-.num, .add, .sub, .mult, .divi, .clear, .dot{
+.num, .ops, .clear, .dot{
     height: 60px;
     width: 70px;
 }
@@ -43,4 +54,5 @@
 button{
     border: 1px solid black;
     border-radius: 10px;
+    font-size: 23px;
 }
