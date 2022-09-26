@@ -1,5 +1,6 @@
 const numbers = document.querySelectorAll('.num');
 const operators = document.querySelectorAll('.ops');
+const equal = document.querySelector('.equals');
 const clear = document.querySelector('.clear');
 const display = document.querySelector('.display');
 let valueOne = '';
@@ -25,9 +26,14 @@ numbers.forEach(function (x){
 operators.forEach(function(y){
     y.addEventListener('click', () =>{
         oper = y.value;
-        screenDisplay += y.value;
+        screenDisplay += y.name;
         display.value = screenDisplay;
     });
+});
+
+equal.addEventListener('click', () =>{
+    let sum = operate(valueOne, valueTwo, oper);
+    display.value = sum;
 });
 
 clear.addEventListener('click', () =>{
@@ -52,14 +58,15 @@ function divide(x, y){
 }
 
 function operate(num1, num2, op){
+    num1 = Number(num1);
+    num2 = Number(num2);
     if(op == '+'){
-        add(num1, num2);
+        return add(num1, num2);
     }else if(op == '-'){
-        subtract(num1, num2);
-    }else if(op =='&times'){
-        multiply(num1, num2);
-    }else if(op =='&#247'){
-        divide(num1, num2);
+        return subtract(num1, num2);
+    }else if(op == '*'){
+        return multiply(num1, num2);
+    }else if(op == '/'){
+        return divide(num1, num2);
     }
-
 }
