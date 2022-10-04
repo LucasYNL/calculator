@@ -42,7 +42,7 @@
     gap: 10px;
 }
 
-.num, .ops, .clear, .dot{
+.ele, .clear, .dot{
     height: 60px;
     width: 70px;
 }
