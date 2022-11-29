@@ -94,6 +94,7 @@ function calculate(x, y, op){
 function operate(){
     let size = stor.length;
     let sum = '';
+    let temp = [];
 
     if(isNaN(Number(stor[0])) === true || isNaN(Number(stor[size - 1])) === true){
         runnable = false;
@@ -128,6 +129,9 @@ function operate(){
             }
         }
     }
+
+    temp.push(sum);
+    stor = temp;
 
     if(runnable === true){
         display.value = sum;
